@@ -31,3 +31,11 @@
 .page_title .breadcrumbs i {
     color: #ffffff !important;
 }
+
+/* Static hero - break out of .container to full viewport width */
+#rev_slider_1_1_wrapper {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}

@@ -1,0 +1,33 @@
+.stm_works_wr .stm_works .item {
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.stm_works_wr .stm_works .item .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.stm_works_wr.cols_2 .stm_works .item {
+    width: 49%;
+    margin-bottom: 15px;
+}
+
+.icon_box.hexagon .icon {
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.icon_box.hexagon .icon i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page_title h1.h2 {
+    color: #ffffff !important;
+}
+.page_title .breadcrumbs,
+.page_title .breadcrumbs a,
+.page_title .breadcrumbs span,
+.page_title .breadcrumbs i {
+    color: #ffffff !important;
+}

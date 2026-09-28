@@ -293,20 +293,53 @@ Kathmandu, Nepal                            </div>
 	<div class="entry-content">
 					<div class="vc_row wpb_row vc_row-fluid vc_custom_1450677977665"><div class="wpb_column vc_column_container vc_col-sm-12 vc_hidden-xs"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="wpb_revslider_element wpb_content_element">
 <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
-<!-- STATIC HERO - replaces Revolution Slider for offline use -->
-<div id="static-hero" style="position:relative; width:100%; height:574px; overflow:hidden;">
-	<img src="/wp-content/uploads/revslider/main_slider/slide_1-2.jpg" alt="Eos Advisors" style="width:100%; height:100%; object-fit:cover; object-position:0% 25%; display:block;">
-	<div style="position:absolute; top:0; left:0; width:100%; height:100%; display:flex; align-items:center; z-index:5;">
-		<div style="width:100%; max-width:1170px; margin:0 auto; padding-left:134px; box-sizing:border-box;">
-		<div class="consulting-rev-title">
-<mark>helping <br/>
-companies <br/></mark>
-navigate <br/>
-change.
-</div>
+<!-- HERO CAROUSEL -->
+<div id="hero-carousel" style="position:relative; width:100%; height:574px; overflow:hidden;">
+	<div id="hero-track" style="display:flex; width:300%; height:100%; transition:transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);">
+		<div class="hero-slide" style="width:calc(100%/3); height:100%; position:relative; flex-shrink:0;">
+			<img src="/wp-content/uploads/revslider/main_slider/slide_1-2.jpg" alt="Eos Advisors" style="width:100%; height:100%; object-fit:cover; object-position:0% 25%; display:block;">
+			<div style="position:absolute; top:0; left:0; width:100%; height:100%; display:flex; align-items:center; z-index:5;">
+				<div style="width:100%; max-width:1170px; margin:0 auto; padding-left:134px; box-sizing:border-box;">
+					<div class="consulting-rev-title"><mark>helping <br/>companies <br/></mark>navigate <br/>change.</div>
+				</div>
+			</div>
+		</div>
+		<div class="hero-slide" style="width:calc(100%/3); height:100%; position:relative; flex-shrink:0;">
+			<img src="/wp-content/uploads/revslider/main_slider/slide_1-2.jpg" alt="Eos Advisors" style="width:100%; height:100%; object-fit:cover; object-position:0% 25%; display:block;">
+			<div style="position:absolute; top:0; left:0; width:100%; height:100%; display:flex; align-items:center; z-index:5;">
+				<div style="width:100%; max-width:1170px; margin:0 auto; padding-left:134px; box-sizing:border-box;">
+					<div class="consulting-rev-title"><mark>helping <br/>companies <br/></mark>navigate <br/>change.</div>
+				</div>
+			</div>
+		</div>
+		<div class="hero-slide" style="width:calc(100%/3); height:100%; position:relative; flex-shrink:0;">
+			<img src="/wp-content/uploads/revslider/main_slider/slide_1-2.jpg" alt="Eos Advisors" style="width:100%; height:100%; object-fit:cover; object-position:0% 25%; display:block;">
+			<div style="position:absolute; top:0; left:0; width:100%; height:100%; display:flex; align-items:center; z-index:5;">
+				<div style="width:100%; max-width:1170px; margin:0 auto; padding-left:134px; box-sizing:border-box;">
+					<div class="consulting-rev-title"><mark>helping <br/>companies <br/></mark>navigate <br/>change.</div>
+				</div>
+			</div>
+		</div>
 	</div>
+	<div style="position:absolute; top:0; left:50%; transform:translateX(-50%); width:100%; max-width:1170px; height:100%; pointer-events:none; z-index:10;">
+		<button id="hero-prev" aria-label="Previous slide" style="position:absolute; left:20px; top:50%; transform:translateY(-50%); pointer-events:auto; width:48px; height:48px; border-radius:0; border:3px solid #c0c5cc; background:transparent; color:#c0c5cc; font-size:24px; font-weight:bold; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.3s ease;">&#10094;</button>
+		<button id="hero-next" aria-label="Next slide" style="position:absolute; right:20px; top:50%; transform:translateY(-50%); pointer-events:auto; width:48px; height:48px; border-radius:0; border:3px solid #c0c5cc; background:transparent; color:#c0c5cc; font-size:24px; font-weight:bold; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.3s ease;">&#10095;</button>
 	</div>
 </div>
+<script>
+(function(){
+	var idx = 0;
+	var slides = document.querySelectorAll('.hero-slide');
+	var total = slides.length;
+	var track = document.getElementById('hero-track');
+	function goTo(i){
+		idx = (i + total) % total;
+		track.style.transform = 'translateX(-' + (idx * (100 / total)) + '%)';
+	}
+	document.getElementById('hero-prev').addEventListener('click', function(){ goTo(idx - 1); });
+	document.getElementById('hero-next').addEventListener('click', function(){ goTo(idx + 1); });
+})();
+</script>
 </div><!-- END HERO SECTION --></div></div></div></div></div>
 					</div>
 	

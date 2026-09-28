@@ -32,10 +32,16 @@
     color: #ffffff !important;
 }
 
-/* Static hero - break out of .container to full viewport width */
 #rev_slider_1_1_wrapper {
     width: 100vw;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+}
+
+#hero-prev:hover,
+#hero-next:hover {
+    background: #ff8c00 !important;
+    border-color: #ff8c00 !important;
+    color: #fff !important;
 }
